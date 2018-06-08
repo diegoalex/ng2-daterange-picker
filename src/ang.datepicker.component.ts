@@ -80,8 +80,8 @@ export class DatePickerComponent implements OnInit, OnChanges {
     this.dateFormat = this.DEFAULT_FORMAT;
     this.colors = {
       'black': '#333333',
-      'blue': '#1285bf',
-      'lightBlue': '#daedf7',
+      'blue': '#b1091d',
+      'lightBlue': '#f1ced4',
       'lightGrey': '#f1f1f1',
       'white': '#ffffff'
     };
