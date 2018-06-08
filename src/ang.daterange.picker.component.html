@@ -3,7 +3,7 @@
     <div style="position: absolute; width: 180px; height: 300px;">
       <table style="margin-top: 1.9em; width:100%;">
         <tr>
-          <td>FROM</td>
+          <td>DE</td>
         </tr>
         <tr>
           <td>
@@ -13,7 +13,7 @@
           </td>
         </tr>
         <tr>
-          <td>TO</td>
+          <td>ATÉ</td>
         </tr>
         <tr>
           <td>
@@ -27,11 +27,11 @@
         <table style="width:100%">
           <tr>
             <td>
-              <button mat-button [disabled]="!startDateText || !endDateText" color="primary" (click)="onApplySelectedDateRange()">Apply
+              <button mat-button [disabled]="!startDateText || !endDateText" color="primary" (click)="onApplySelectedDateRange()">Confirmar
               </button>
             </td>
             <td>
-              <button mat-button (click)="onCloseContextualMenu()">Cancel
+              <button mat-button (click)="onCloseContextualMenu()">Cancelar
               </button>
             </td>
           </tr>
@@ -39,9 +39,25 @@
       </div>
     </div>
     <div style="margin-left:180px">
-      <ang-datepicker [(date)]="startDate" (onSelect)="onSelectStartDate($event)" dateFormat="YYYY-MM-DD" [endDate]="endDate" [startDate]="startDate">
+      <ang-datepicker 
+          [(date)]="startDate" 
+          (onSelect)="onSelectStartDate($event)" 
+          dateFormat="DD/MM/YYYY" 
+          [endDate]="endDate" 
+          [startDate]="startDate"
+          [months]="['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', ' Dezembro']"
+          [dayNames]="['D', 'S', 'T', 'Q', 'Q', 'S', 'S']"
+        >
       </ang-datepicker>
-      <ang-datepicker [(date)]="endDate" (onSelect)="onSelectEndDate($event)" dateFormat="YYYY-MM-DD" [endDate]="endDate" [startDate]="startDate">
+      <ang-datepicker 
+          [(date)]="endDate" 
+          (onSelect)="onSelectEndDate($event)" 
+          dateFormat="DD/MM/YYYY" 
+          [endDate]="endDate" 
+          [startDate]="startDate"
+          [months]="['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', ' Dezembro']"
+          [dayNames]="['D', 'S', 'T', 'Q', 'Q', 'S', 'S']"
+          >
       </ang-datepicker>
     </div>
   </mat-card>
